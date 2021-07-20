@@ -8,16 +8,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class OcorrenciaService {
 
-    private OcorrenciaRepository repository;
+    //private OcorrenciaRepository repository;
 
-    @Autowired
-    public OcorrenciaService(OcorrenciaRepository repository){
-        this.repository = repository;
-    }
+    //@Autowired
+   // public OcorrenciaService(OcorrenciaRepository repository){
+   //     this.repository = repository;
+    //}
 
     public void salvarOcorrencia(Ocorrencia ocorrencia){
         validarOcorrencia(ocorrencia);
-        this.repository.persistir(ocorrencia);
+        OcorrenciaRepository ocorrenciaRepository = new OcorrenciaRepository();
+        ocorrenciaRepository.persistir(ocorrencia);
     }
 
     public void validarOcorrencia(Ocorrencia ocorrencia){
