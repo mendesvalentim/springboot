@@ -10,7 +10,7 @@ public class OcorrenciaService {
 
     private OcorrenciaRepository repository;
 
-    @Autowired
+   // @Autowired
     public OcorrenciaService(OcorrenciaRepository repository){
         this.repository = repository;
     }
